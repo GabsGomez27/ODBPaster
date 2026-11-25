@@ -5,16 +5,18 @@ Herramienta de escritorio para Windows que ayuda a capturar datos de referencias
 ## Funciones
 
 - Editor simple con tema oscuro y captura automática desde el portapapeles.
-- Reconoce MRN, nombre, fecha de nacimiento, teléfono y correo electrónico.
-- Atajo global `Ctrl+Shift+F` para iniciar el proceso.
-- Automatización del navegador mediante Playwright.
-- Configuración editable para el puerto y la URL del formulario.
+- Reconoce automaticamente Demographics basicos como MRNs, nombres, correos y celulares.
+- Automatiza el volcado de data en el formulario del navegador mediante Playwright.
+- Configuración externa editable para el puerto y la URL del formulario.
 
 ## Requisitos
 
 - Windows
+- Cualquier navegador basado en chromium (Chrome, opera, edge, brave, etc...)
+
+## Requisitos para build
+
 - Python 3
-- Microsoft Edge o Chrome configurado con depuración remota
 - Playwright para Python
 - PyInstaller, solo para crear el ejecutable
 
@@ -35,7 +37,7 @@ Edita `config.json`:
     "host": "localhost",
     "port": 9222
   },
-  "form_url": "test.enterpriseurl.com"
+  "form_url": "test.enterpriseurl.com" #colocar URL empresarial acá
 }
 ```
 
@@ -43,11 +45,12 @@ Inicia el navegador con depuración remota activa en el puerto configurado y abr
 
 ## Ejecución
 
+Doble click en el .exe, o:
 ```bat
 python main.py
 ```
 
-Pega o escribe los datos en el editor. Cuando estés listo, usa `Ctrl+Shift+F` o ejecuta **Actions > Dunk on ODB**. Presiona `Esc` para cancelar.
+Pega o escribe los datos en el editor. Cuando estés listo, usa `Ctrl+Shift+F` o ejecuta **Actions > Dunk on ODB** para comenzar el volcado de data. Presiona `Esc` para cancelar.
 
 ## Crear el ejecutable
 
