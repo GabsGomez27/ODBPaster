@@ -1,0 +1,7 @@
+{
+  "browser": {
+    "host": "localhost",
+    "port": 9222
+  },
+  "form_url": "test.enterpriseurl.com"
+}
